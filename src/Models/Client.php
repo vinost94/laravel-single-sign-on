@@ -4,7 +4,7 @@ namespace Vinothst94\LaravelSingleSignOn\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SSOClient extends Model
+class Client extends Model
 {
     /**
      * Get the table associated with the model.
