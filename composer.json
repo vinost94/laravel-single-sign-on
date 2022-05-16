@@ -1,7 +1,7 @@
 {
     "name": "vinothst94/laravel-single-sign-on",
     "description": "Single sign on package for Laravel 9",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
