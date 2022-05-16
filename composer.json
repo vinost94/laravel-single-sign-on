@@ -17,5 +17,12 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^8.0.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vinothst94\\LaravelSingleSignOn\\SSOServiceProvider"
+            ]
+        }
     }
 }
