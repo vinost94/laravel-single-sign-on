@@ -74,7 +74,7 @@ class SSOServiceProvider extends ServiceProvider
     protected function loadRoutes()
     {
         // If this page is server, load routes which is required for the server.
-        if (config('laravel-sso.type') == 'server') {
+        if (config('laravel-sso.type') == 'host') {
             $this->loadRoutesFrom(__DIR__.'/Routes/server.php');
         }
     }
