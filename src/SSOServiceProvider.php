@@ -23,7 +23,8 @@ class SSOServiceProvider extends ServiceProvider
     {
         $this->publishConfig(__DIR__ . '/../config/' . $this->configFileName);
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->publishMigration();
 
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -63,7 +64,14 @@ class SSOServiceProvider extends ServiceProvider
      */
     protected function publishConfig(string $configPath)
     {
-        $this->publishes([$configPath => $this->getConfigPath()]);
+        $this->publishes([$configPath => $this->getConfigPath()], 'laravel-sso-config');
+    }
+
+    protected function publishMigration()
+    {
+        $this->publishes([
+            __DIR__.'/../database/migrations/' => database_path('migrations')
+        ], 'laravel-sso-migrations');
     }
 
     /**

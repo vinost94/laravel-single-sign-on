@@ -14,7 +14,7 @@ class CreateClientUserTable extends Migration
     public function up()
     {
         Schema::create(config('laravel-sso.clientUserTable', 'client_user'), function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
 
             $table->integer('user_id')->foreign('user_id')->references('id')->on('users');
             $table->integer('client_id')->foreign('client_id')->references('id')->on('clients');
