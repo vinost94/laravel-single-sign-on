@@ -1,0 +1,21 @@
+{
+    "name": "vinothst94/laravel-single-sign-on",
+    "description": "Single sign on package for Laravel 9",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vinothst94\\LaravelSingleSignOn\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vinoth Premkumar",
+            "email": "vinoth@live.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0.2"
+    }
+}
